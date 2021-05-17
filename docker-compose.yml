@@ -1,0 +1,20 @@
+version: "3.8"
+services: 
+ mongodb:
+  image : mongo
+  container_name: mongodb
+  environment:
+   - PUID=1000
+   - PGID=1000
+   - MONGO_INITDB_DATABASE=dactilocontest
+  volumes:
+   - /home/barry/mongodb/database:/data/db
+  ports:
+   - 27017:27017
+  restart: unless-stopped
+ app:
+  image : dactiloapp
+  container_name: dactilo-container
+  ports:
+   - 3000:3000
+  restart: unless-stopped

@@ -1,0 +1,115 @@
+<%- include('header'); -%>
+
+<style>
+    #wrapper {
+        font-family: 'Balsamiq Sans', cursive;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "t t ti"
+                       "p g g"
+                       "b b b";
+        grid-template-rows: 50px 500px 50px;
+        grid-template-columns: 10% 80% 10%;
+        height: 80vh;
+    }
+
+    .titre {
+        grid-area: t;
+        background-color: white;
+    }
+
+    .game {
+        grid-area: g;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 5em;
+    }
+
+    .players {
+        grid-area: p;
+        background-color: white;
+        position: relative;
+    }
+
+    .players button {
+        width: 100%;
+        height: 35px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .typing-bar {
+        grid-area: b;
+        background-color: white;
+    }
+
+    .typing-bar input {
+        width: 100%;
+        height: 100%;
+        font-size: 2em;
+    }
+
+
+    .player-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .player-list li {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .player-list li:nth-child(2n) {
+        background-color: lightgrey;
+    }
+
+    .timer {
+        grid-area: ti;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
+</style>
+
+<div id="wrapper">
+    <div class="titre">
+        <h1 class="text-center"></h1>
+    </div>
+    <div class="timer">
+        <span class="minutes">00</span>
+        <span>:</span>
+        <span class="seconds">00</span>
+    </div>
+    <div class="players">
+        <ul class="player-list">
+            <li>Joueurs dans le salon :</li>
+        </ul>
+
+        <button style="display: none" id="startGame" onclick="commencerPartie(this)" class="btn btn-outline-info mb-1">
+            Commencer la partie
+        </button>
+
+    </div>
+    <div class="game">
+        EN ATTENTE DES AUTRES JOUEURS ...
+    </div>
+    <div class="typing-bar">
+        <input id="typing-bar" type="text">
+    </div>
+</div>
+
+<script src="/js/jquery.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+</script>
+<script src="/javascripts/partie.js"></script>
+<%- include('footer'); -%>

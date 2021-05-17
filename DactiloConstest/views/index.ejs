@@ -1,0 +1,58 @@
+<%- include('header'); -%>
+<style>
+    .wrapper{
+        font-family: 'Balsamiq Sans', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+    }
+    .wrapper .titre {
+        font-size: 6em;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
+    .wrapper div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .wrapper label{
+        color: white;
+    }
+    .wrapper div input{
+        width: 300px;
+        height: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .wrapper div input[type=submit]{
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: 0;
+    }
+</style>
+<form action="/partie">
+    <div class="wrapper" >
+        <h1 class="titre">Dactilo contest</h1>
+        <div>
+            <input name="pseudo" type="text" placeholder="VOTRE PSEUDO">
+        </div>
+
+        <div>
+            <input name="roomName" type="text" placeholder="NOM DU SALON">
+        </div>
+        <div>
+            <input type="submit" value="REJOINDRE">
+        </div>
+    </div>
+</form>
+
+
+
+<%- include('footer'); -%>
