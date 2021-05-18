@@ -1,14 +1,12 @@
 version: "3.8"
 services: 
  mongodb:
-  image : mongo
+  build: ./DactiloContest
   container_name: mongodb
   environment:
-   - PUID=1000
-   - PGID=1000
-   - MONGO_INITDB_DATABASE=dactilocontest
+   - MONGO_INITDB_DATABASE:dactilocontest
   volumes:
-   - /home/barry/mongodb/database:/data/db
+   - ./scripts/init.js:/docker-entrypoint-initdb.d/init.js:ro
   ports:
    - 27017:27017
   restart: unless-stopped
@@ -18,3 +16,7 @@ services:
   ports:
    - 3000:3000
   restart: unless-stopped
+ mongo-seed:
+  build: ./seed
+  links:
+   - mongodb

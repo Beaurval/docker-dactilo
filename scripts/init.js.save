@@ -1,0 +1,9301 @@
+db = db.getSiblingDB('admin')
+
+db.createUser({
+  user: "dacti",
+  pwd: "1234",
+  roles: [{role: "readWrite", db: "dactilocontest"}]
+});
+
+db = db.getSiblingDB("dactilocontest");
+
+db.createCollection("rooms");
+db.createCollection("players");
+db.createCollection("scores");
+db.createCollection("words");
+
+db.words.insertMany([
+[{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044936b"
+  },
+  "Word": "abaissa"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044936c"
+  },
+  "Word": "abaissait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044936d"
+  },
+  "Word": "abaissant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044936e"
+  },
+  "Word": "abaissant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044936f"
+  },
+  "Word": "abaisse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449370"
+  },
+  "Word": "abaisse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449371"
+  },
+  "Word": "abaissé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449372"
+  },
+  "Word": "abaissé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449373"
+  },
+  "Word": "abaisser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449374"
+  },
+  "Word": "abaissez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449375"
+  },
+  "Word": "abandon"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449376"
+  },
+  "Word": "abandonna"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449377"
+  },
+  "Word": "abandonne"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449378"
+  },
+  "Word": "abandonné"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449379"
+  },
+  "Word": "abandonné"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937a"
+  },
+  "Word": "abandons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937b"
+  },
+  "Word": "abasourdi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937c"
+  },
+  "Word": "abasourdi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937d"
+  },
+  "Word": "abat"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937e"
+  },
+  "Word": "abat"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044937f"
+  },
+  "Word": "abatis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449380"
+  },
+  "Word": "abats"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449381"
+  },
+  "Word": "abats"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449382"
+  },
+  "Word": "abattage"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449383"
+  },
+  "Word": "abattait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449384"
+  },
+  "Word": "abattant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449385"
+  },
+  "Word": "abattant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449386"
+  },
+  "Word": "abattent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449387"
+  },
+  "Word": "abattez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449388"
+  },
+  "Word": "abattis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449389"
+  },
+  "Word": "abattis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938a"
+  },
+  "Word": "abattit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938b"
+  },
+  "Word": "abattoir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938c"
+  },
+  "Word": "abattoirs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938d"
+  },
+  "Word": "abattra"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938e"
+  },
+  "Word": "abattrait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044938f"
+  },
+  "Word": "abattre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449390"
+  },
+  "Word": "abattriez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449391"
+  },
+  "Word": "abattront"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449392"
+  },
+  "Word": "abattu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449393"
+  },
+  "Word": "abattu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449394"
+  },
+  "Word": "abattu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449395"
+  },
+  "Word": "abattue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449396"
+  },
+  "Word": "abattue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449397"
+  },
+  "Word": "abattus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449398"
+  },
+  "Word": "abattus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449399"
+  },
+  "Word": "abattus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939a"
+  },
+  "Word": "abbaye"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939b"
+  },
+  "Word": "abcès"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939c"
+  },
+  "Word": "abdomen"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939d"
+  },
+  "Word": "abdos"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939e"
+  },
+  "Word": "abeille"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044939f"
+  },
+  "Word": "abeilles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a0"
+  },
+  "Word": "aberrant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a1"
+  },
+  "Word": "aberrant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a2"
+  },
+  "Word": "abîma"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a3"
+  },
+  "Word": "abîmaient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a4"
+  },
+  "Word": "abîmait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a5"
+  },
+  "Word": "abîme"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a6"
+  },
+  "Word": "abîme"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a7"
+  },
+  "Word": "abîmé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a8"
+  },
+  "Word": "abîmée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493a9"
+  },
+  "Word": "abîmer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493aa"
+  },
+  "Word": "abîmeras"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ab"
+  },
+  "Word": "abîmes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ac"
+  },
+  "Word": "abîmes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ad"
+  },
+  "Word": "abîmés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ae"
+  },
+  "Word": "abîmez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493af"
+  },
+  "Word": "abject"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b0"
+  },
+  "Word": "abjecte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b1"
+  },
+  "Word": "abjection"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b2"
+  },
+  "Word": "ablation"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b3"
+  },
+  "Word": "ablations"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b4"
+  },
+  "Word": "aboie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b5"
+  },
+  "Word": "aboiement"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b6"
+  },
+  "Word": "abois"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b7"
+  },
+  "Word": "aboli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b8"
+  },
+  "Word": "aboli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493b9"
+  },
+  "Word": "abolir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ba"
+  },
+  "Word": "abolis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493bb"
+  },
+  "Word": "abolis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493bc"
+  },
+  "Word": "abolit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493bd"
+  },
+  "Word": "abolition"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493be"
+  },
+  "Word": "abondance"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493bf"
+  },
+  "Word": "abondant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c0"
+  },
+  "Word": "abondant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c1"
+  },
+  "Word": "abondante"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c2"
+  },
+  "Word": "abonnés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c3"
+  },
+  "Word": "abonnés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c4"
+  },
+  "Word": "abonnés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c5"
+  },
+  "Word": "abord"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c6"
+  },
+  "Word": "aborda"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c7"
+  },
+  "Word": "abordage"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c8"
+  },
+  "Word": "abordages"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493c9"
+  },
+  "Word": "abordait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ca"
+  },
+  "Word": "abordant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493cb"
+  },
+  "Word": "aborde"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493cc"
+  },
+  "Word": "abordé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493cd"
+  },
+  "Word": "abordé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ce"
+  },
+  "Word": "aborder"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493cf"
+  },
+  "Word": "abords"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d0"
+  },
+  "Word": "aborigène"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d1"
+  },
+  "Word": "aborigène"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d2"
+  },
+  "Word": "abouti"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d3"
+  },
+  "Word": "abouti"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d4"
+  },
+  "Word": "aboutie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d5"
+  },
+  "Word": "aboutie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d6"
+  },
+  "Word": "aboutir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d7"
+  },
+  "Word": "aboutit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d8"
+  },
+  "Word": "aboya"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493d9"
+  },
+  "Word": "aboyait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493da"
+  },
+  "Word": "aboyant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493db"
+  },
+  "Word": "aboyant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493dc"
+  },
+  "Word": "aboyer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493dd"
+  },
+  "Word": "aboyeurs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493de"
+  },
+  "Word": "aboyeurs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493df"
+  },
+  "Word": "abrège"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e0"
+  },
+  "Word": "abréger"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e1"
+  },
+  "Word": "abreuve"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e2"
+  },
+  "Word": "abreuver"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e3"
+  },
+  "Word": "abreuvoir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e4"
+  },
+  "Word": "abri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e5"
+  },
+  "Word": "abricot"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e6"
+  },
+  "Word": "abricot"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e7"
+  },
+  "Word": "abricots"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e8"
+  },
+  "Word": "abris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493e9"
+  },
+  "Word": "abritait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ea"
+  },
+  "Word": "abritant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493eb"
+  },
+  "Word": "abritant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ec"
+  },
+  "Word": "abrite"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ed"
+  },
+  "Word": "abrité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ee"
+  },
+  "Word": "abrité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ef"
+  },
+  "Word": "abritée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f0"
+  },
+  "Word": "abritée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f1"
+  },
+  "Word": "abritent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f2"
+  },
+  "Word": "abriter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f3"
+  },
+  "Word": "abrités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f4"
+  },
+  "Word": "abrités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f5"
+  },
+  "Word": "abritez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f6"
+  },
+  "Word": "abrupt"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f7"
+  },
+  "Word": "abrupt"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f8"
+  },
+  "Word": "abrupte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493f9"
+  },
+  "Word": "abruptes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493fa"
+  },
+  "Word": "abruti"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493fb"
+  },
+  "Word": "abruti"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493fc"
+  },
+  "Word": "abruti"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493fd"
+  },
+  "Word": "abrutir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493fe"
+  },
+  "Word": "abrutis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004493ff"
+  },
+  "Word": "abrutis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449400"
+  },
+  "Word": "abrutis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449401"
+  },
+  "Word": "absence"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449402"
+  },
+  "Word": "absences"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449403"
+  },
+  "Word": "absent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449404"
+  },
+  "Word": "absent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449405"
+  },
+  "Word": "absentait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449406"
+  },
+  "Word": "absente"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449407"
+  },
+  "Word": "absente"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449408"
+  },
+  "Word": "absente"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449409"
+  },
+  "Word": "absenté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940a"
+  },
+  "Word": "absenter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940b"
+  },
+  "Word": "absentés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940c"
+  },
+  "Word": "absents"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940d"
+  },
+  "Word": "absents"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940e"
+  },
+  "Word": "absinthe"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044940f"
+  },
+  "Word": "absolu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449410"
+  },
+  "Word": "absolu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449411"
+  },
+  "Word": "absolue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449412"
+  },
+  "Word": "absolues"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449413"
+  },
+  "Word": "absorba"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449414"
+  },
+  "Word": "absorbait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449415"
+  },
+  "Word": "absorbe"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449416"
+  },
+  "Word": "absorbé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449417"
+  },
+  "Word": "absorbé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449418"
+  },
+  "Word": "absorbée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449419"
+  },
+  "Word": "absorbée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941a"
+  },
+  "Word": "absorber"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941b"
+  },
+  "Word": "absorbés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941c"
+  },
+  "Word": "absorbés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941d"
+  },
+  "Word": "abstenir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941e"
+  },
+  "Word": "abstenu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044941f"
+  },
+  "Word": "abstenus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449420"
+  },
+  "Word": "abstrait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449421"
+  },
+  "Word": "abstrait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449422"
+  },
+  "Word": "abstrait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449423"
+  },
+  "Word": "abstraite"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449424"
+  },
+  "Word": "abstraite"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449425"
+  },
+  "Word": "abstraits"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449426"
+  },
+  "Word": "abstraits"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449427"
+  },
+  "Word": "abstraits"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449428"
+  },
+  "Word": "absurde"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449429"
+  },
+  "Word": "absurde"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942a"
+  },
+  "Word": "absurdes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942b"
+  },
+  "Word": "absurdes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942c"
+  },
+  "Word": "absurdité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942d"
+  },
+  "Word": "abus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942e"
+  },
+  "Word": "abusait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044942f"
+  },
+  "Word": "abuse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449430"
+  },
+  "Word": "abusé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449431"
+  },
+  "Word": "abusé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449432"
+  },
+  "Word": "abuser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449433"
+  },
+  "Word": "abusez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449434"
+  },
+  "Word": "acacias"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449435"
+  },
+  "Word": "académie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449436"
+  },
+  "Word": "académies"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449437"
+  },
+  "Word": "acajou"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449438"
+  },
+  "Word": "acajou"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449439"
+  },
+  "Word": "accablait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943a"
+  },
+  "Word": "accablant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943b"
+  },
+  "Word": "accablant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943c"
+  },
+  "Word": "accablât"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943d"
+  },
+  "Word": "accable"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943e"
+  },
+  "Word": "accablé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044943f"
+  },
+  "Word": "accablé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449440"
+  },
+  "Word": "accablée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449441"
+  },
+  "Word": "accablée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449442"
+  },
+  "Word": "accablent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449443"
+  },
+  "Word": "accabler"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449444"
+  },
+  "Word": "accablés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449445"
+  },
+  "Word": "accablés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449446"
+  },
+  "Word": "accalmie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449447"
+  },
+  "Word": "accédait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449448"
+  },
+  "Word": "accédé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449449"
+  },
+  "Word": "accède"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944a"
+  },
+  "Word": "accéder"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944b"
+  },
+  "Word": "accéléra"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944c"
+  },
+  "Word": "accéléré"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944d"
+  },
+  "Word": "accéléré"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944e"
+  },
+  "Word": "accéléré"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044944f"
+  },
+  "Word": "accélère"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449450"
+  },
+  "Word": "accélérée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449451"
+  },
+  "Word": "accélérer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449452"
+  },
+  "Word": "accélérez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449453"
+  },
+  "Word": "accent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449454"
+  },
+  "Word": "accents"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449455"
+  },
+  "Word": "accentua"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449456"
+  },
+  "Word": "accentuai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449457"
+  },
+  "Word": "accentuât"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449458"
+  },
+  "Word": "accentue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449459"
+  },
+  "Word": "accentuer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945a"
+  },
+  "Word": "accepta"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945b"
+  },
+  "Word": "acceptai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945c"
+  },
+  "Word": "acceptais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945d"
+  },
+  "Word": "acceptait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945e"
+  },
+  "Word": "acceptant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044945f"
+  },
+  "Word": "acceptant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449460"
+  },
+  "Word": "acceptât"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449461"
+  },
+  "Word": "accepte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449462"
+  },
+  "Word": "accepté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449463"
+  },
+  "Word": "acceptée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449464"
+  },
+  "Word": "acceptent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449465"
+  },
+  "Word": "accepter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449466"
+  },
+  "Word": "acceptera"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449467"
+  },
+  "Word": "acceptes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449468"
+  },
+  "Word": "acceptez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449469"
+  },
+  "Word": "acceptiez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946a"
+  },
+  "Word": "acceptons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946b"
+  },
+  "Word": "accès"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946c"
+  },
+  "Word": "accession"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946d"
+  },
+  "Word": "accident"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946e"
+  },
+  "Word": "accidents"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044946f"
+  },
+  "Word": "acclamé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449470"
+  },
+  "Word": "acclamer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449471"
+  },
+  "Word": "accolade"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449472"
+  },
+  "Word": "accolent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449473"
+  },
+  "Word": "accommode"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449474"
+  },
+  "Word": "accompli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449475"
+  },
+  "Word": "accompli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449476"
+  },
+  "Word": "accompli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449477"
+  },
+  "Word": "accomplie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449478"
+  },
+  "Word": "accomplie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449479"
+  },
+  "Word": "accomplir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947a"
+  },
+  "Word": "accomplis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947b"
+  },
+  "Word": "accomplis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947c"
+  },
+  "Word": "accomplit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947d"
+  },
+  "Word": "accord"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947e"
+  },
+  "Word": "accorda"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044947f"
+  },
+  "Word": "accordais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449480"
+  },
+  "Word": "accordait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449481"
+  },
+  "Word": "accordant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449482"
+  },
+  "Word": "accorde"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449483"
+  },
+  "Word": "accordé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449484"
+  },
+  "Word": "accordé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449485"
+  },
+  "Word": "accordée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449486"
+  },
+  "Word": "accordée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449487"
+  },
+  "Word": "accordées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449488"
+  },
+  "Word": "accordées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449489"
+  },
+  "Word": "accordent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948a"
+  },
+  "Word": "accordéon"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948b"
+  },
+  "Word": "accorder"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948c"
+  },
+  "Word": "accordés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948d"
+  },
+  "Word": "accordés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948e"
+  },
+  "Word": "accordez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044948f"
+  },
+  "Word": "accords"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449490"
+  },
+  "Word": "accoster"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449491"
+  },
+  "Word": "accouche"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449492"
+  },
+  "Word": "accouché"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449493"
+  },
+  "Word": "accoucher"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449494"
+  },
+  "Word": "accouda"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449495"
+  },
+  "Word": "accoude"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449496"
+  },
+  "Word": "accoudé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449497"
+  },
+  "Word": "accoudé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449498"
+  },
+  "Word": "accoudée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449499"
+  },
+  "Word": "accoudée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949a"
+  },
+  "Word": "accouder"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949b"
+  },
+  "Word": "accoudés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949c"
+  },
+  "Word": "accoudés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949d"
+  },
+  "Word": "accoudoir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949e"
+  },
+  "Word": "accoudons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044949f"
+  },
+  "Word": "accoupler"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a0"
+  },
+  "Word": "accourait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a1"
+  },
+  "Word": "accourir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a2"
+  },
+  "Word": "accouru"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a3"
+  },
+  "Word": "accourue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a4"
+  },
+  "Word": "accourus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a5"
+  },
+  "Word": "accourut"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a6"
+  },
+  "Word": "accoutumé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a7"
+  },
+  "Word": "accoutumé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a8"
+  },
+  "Word": "accro"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494a9"
+  },
+  "Word": "accro"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494aa"
+  },
+  "Word": "accroc"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ab"
+  },
+  "Word": "accrocha"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ac"
+  },
+  "Word": "accrochai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ad"
+  },
+  "Word": "accroche"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ae"
+  },
+  "Word": "accroche"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494af"
+  },
+  "Word": "accroché"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b0"
+  },
+  "Word": "accroché"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b1"
+  },
+  "Word": "accrochée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b2"
+  },
+  "Word": "accrochée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b3"
+  },
+  "Word": "accrocher"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b4"
+  },
+  "Word": "accroches"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b5"
+  },
+  "Word": "accroches"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b6"
+  },
+  "Word": "accrochés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b7"
+  },
+  "Word": "accrochés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b8"
+  },
+  "Word": "accrochez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494b9"
+  },
+  "Word": "accroît"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ba"
+  },
+  "Word": "accroître"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494bb"
+  },
+  "Word": "accroupi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494bc"
+  },
+  "Word": "accroupi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494bd"
+  },
+  "Word": "accroupie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494be"
+  },
+  "Word": "accroupie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494bf"
+  },
+  "Word": "accroupir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c0"
+  },
+  "Word": "accroupis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c1"
+  },
+  "Word": "accroupis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c2"
+  },
+  "Word": "accroupit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c3"
+  },
+  "Word": "accru"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c4"
+  },
+  "Word": "accru"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c5"
+  },
+  "Word": "accrue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c6"
+  },
+  "Word": "accrue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c7"
+  },
+  "Word": "accrue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c8"
+  },
+  "Word": "accrus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494c9"
+  },
+  "Word": "accrus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ca"
+  },
+  "Word": "accueil"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494cb"
+  },
+  "Word": "accueille"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494cc"
+  },
+  "Word": "accueilli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494cd"
+  },
+  "Word": "accumule"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ce"
+  },
+  "Word": "accumulé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494cf"
+  },
+  "Word": "accumulée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d0"
+  },
+  "Word": "accumuler"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d1"
+  },
+  "Word": "accumulés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d2"
+  },
+  "Word": "accusa"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d3"
+  },
+  "Word": "accusait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d4"
+  },
+  "Word": "accusant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d5"
+  },
+  "Word": "accuse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d6"
+  },
+  "Word": "accusé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d7"
+  },
+  "Word": "accusé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d8"
+  },
+  "Word": "accusé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494d9"
+  },
+  "Word": "accusée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494da"
+  },
+  "Word": "accusée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494db"
+  },
+  "Word": "accusée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494dc"
+  },
+  "Word": "accusent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494dd"
+  },
+  "Word": "accuser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494de"
+  },
+  "Word": "accusera"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494df"
+  },
+  "Word": "accuses"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e0"
+  },
+  "Word": "accusés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e1"
+  },
+  "Word": "accusés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e2"
+  },
+  "Word": "accusés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e3"
+  },
+  "Word": "accusez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e4"
+  },
+  "Word": "acharna"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e5"
+  },
+  "Word": "acharnai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e6"
+  },
+  "Word": "acharnait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e7"
+  },
+  "Word": "acharnant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e8"
+  },
+  "Word": "acharne"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494e9"
+  },
+  "Word": "acharné"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ea"
+  },
+  "Word": "acharné"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494eb"
+  },
+  "Word": "acharnée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ec"
+  },
+  "Word": "acharnée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ed"
+  },
+  "Word": "acharnent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ee"
+  },
+  "Word": "acharner"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ef"
+  },
+  "Word": "acharnés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f0"
+  },
+  "Word": "acharnés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f1"
+  },
+  "Word": "acharnez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f2"
+  },
+  "Word": "achat"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f3"
+  },
+  "Word": "achats"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f4"
+  },
+  "Word": "achemina"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f5"
+  },
+  "Word": "acheminai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f6"
+  },
+  "Word": "acheminée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f7"
+  },
+  "Word": "acheminer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f8"
+  },
+  "Word": "acheta"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494f9"
+  },
+  "Word": "achetai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494fa"
+  },
+  "Word": "achetais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494fb"
+  },
+  "Word": "achetait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494fc"
+  },
+  "Word": "achetant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494fd"
+  },
+  "Word": "acheté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494fe"
+  },
+  "Word": "achète"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004494ff"
+  },
+  "Word": "achetée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449500"
+  },
+  "Word": "achetées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449501"
+  },
+  "Word": "achètent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449502"
+  },
+  "Word": "acheter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449503"
+  },
+  "Word": "achètera"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449504"
+  },
+  "Word": "achèterai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449505"
+  },
+  "Word": "achèteras"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449506"
+  },
+  "Word": "achetés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449507"
+  },
+  "Word": "achètes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449508"
+  },
+  "Word": "acheteur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449509"
+  },
+  "Word": "acheteurs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950a"
+  },
+  "Word": "acheteuse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950b"
+  },
+  "Word": "achetez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950c"
+  },
+  "Word": "achetons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950d"
+  },
+  "Word": "acheva"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950e"
+  },
+  "Word": "achevait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044950f"
+  },
+  "Word": "achevant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449510"
+  },
+  "Word": "achevé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449511"
+  },
+  "Word": "achevé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449512"
+  },
+  "Word": "achève"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449513"
+  },
+  "Word": "achevée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449514"
+  },
+  "Word": "achevée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449515"
+  },
+  "Word": "achèvent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449516"
+  },
+  "Word": "achever"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449517"
+  },
+  "Word": "achevez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449518"
+  },
+  "Word": "achevions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449519"
+  },
+  "Word": "acide"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951a"
+  },
+  "Word": "acide"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951b"
+  },
+  "Word": "acides"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951c"
+  },
+  "Word": "acides"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951d"
+  },
+  "Word": "acier"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951e"
+  },
+  "Word": "aciers"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044951f"
+  },
+  "Word": "acné"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449520"
+  },
+  "Word": "acolyte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449521"
+  },
+  "Word": "acolytes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449522"
+  },
+  "Word": "acompte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449523"
+  },
+  "Word": "acquérir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449524"
+  },
+  "Word": "acquiert"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449525"
+  },
+  "Word": "acquiesça"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449526"
+  },
+  "Word": "acquiesce"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449527"
+  },
+  "Word": "acquiescé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449528"
+  },
+  "Word": "acquis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449529"
+  },
+  "Word": "acquis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952a"
+  },
+  "Word": "acquis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952b"
+  },
+  "Word": "acquise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952c"
+  },
+  "Word": "acquise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952d"
+  },
+  "Word": "acquises"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952e"
+  },
+  "Word": "acquises"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044952f"
+  },
+  "Word": "acquit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449530"
+  },
+  "Word": "acquit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449531"
+  },
+  "Word": "acquitté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449532"
+  },
+  "Word": "acquitté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449533"
+  },
+  "Word": "acquitté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449534"
+  },
+  "Word": "acquitter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449535"
+  },
+  "Word": "âcre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449536"
+  },
+  "Word": "âcres"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449537"
+  },
+  "Word": "acrobate"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449538"
+  },
+  "Word": "acrobates"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449539"
+  },
+  "Word": "acte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953a"
+  },
+  "Word": "actes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953b"
+  },
+  "Word": "acteur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953c"
+  },
+  "Word": "acteurs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953d"
+  },
+  "Word": "actif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953e"
+  },
+  "Word": "actif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044953f"
+  },
+  "Word": "actifs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449540"
+  },
+  "Word": "actifs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449541"
+  },
+  "Word": "action"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449542"
+  },
+  "Word": "actionne"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449543"
+  },
+  "Word": "actionner"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449544"
+  },
+  "Word": "actionnez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449545"
+  },
+  "Word": "actions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449546"
+  },
+  "Word": "actions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449547"
+  },
+  "Word": "activait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449548"
+  },
+  "Word": "active"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449549"
+  },
+  "Word": "active"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954a"
+  },
+  "Word": "activé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954b"
+  },
+  "Word": "activé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954c"
+  },
+  "Word": "activée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954d"
+  },
+  "Word": "activée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954e"
+  },
+  "Word": "activer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044954f"
+  },
+  "Word": "actives"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449550"
+  },
+  "Word": "actives"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449551"
+  },
+  "Word": "activés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449552"
+  },
+  "Word": "activés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449553"
+  },
+  "Word": "activez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449554"
+  },
+  "Word": "activité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449555"
+  },
+  "Word": "activités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449556"
+  },
+  "Word": "actrice"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449557"
+  },
+  "Word": "actrices"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449558"
+  },
+  "Word": "actualité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449559"
+  },
+  "Word": "actuel"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955a"
+  },
+  "Word": "actuelle"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955b"
+  },
+  "Word": "actuelles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955c"
+  },
+  "Word": "actuels"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955d"
+  },
+  "Word": "acuité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955e"
+  },
+  "Word": "adapte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044955f"
+  },
+  "Word": "adapté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449560"
+  },
+  "Word": "adaptée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449561"
+  },
+  "Word": "adaptées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449562"
+  },
+  "Word": "adapter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449563"
+  },
+  "Word": "addition"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449564"
+  },
+  "Word": "additions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449565"
+  },
+  "Word": "adepte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449566"
+  },
+  "Word": "adeptes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449567"
+  },
+  "Word": "adéquat"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449568"
+  },
+  "Word": "adéquate"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449569"
+  },
+  "Word": "adhérent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956a"
+  },
+  "Word": "adhérent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956b"
+  },
+  "Word": "adhérer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956c"
+  },
+  "Word": "adhésion"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956d"
+  },
+  "Word": "adieu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956e"
+  },
+  "Word": "adieu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044956f"
+  },
+  "Word": "adieux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449570"
+  },
+  "Word": "adjacent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449571"
+  },
+  "Word": "adjectif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449572"
+  },
+  "Word": "adjectif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449573"
+  },
+  "Word": "adjectifs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449574"
+  },
+  "Word": "adjoindre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449575"
+  },
+  "Word": "adjoint"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449576"
+  },
+  "Word": "adjoint"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449577"
+  },
+  "Word": "adjoint"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449578"
+  },
+  "Word": "adjoints"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449579"
+  },
+  "Word": "adjoints"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957a"
+  },
+  "Word": "adjoints"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957b"
+  },
+  "Word": "adjudant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957c"
+  },
+  "Word": "adjugé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957d"
+  },
+  "Word": "admet"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957e"
+  },
+  "Word": "admets"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044957f"
+  },
+  "Word": "admettait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449580"
+  },
+  "Word": "admettant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449581"
+  },
+  "Word": "admettez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449582"
+  },
+  "Word": "admettons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449583"
+  },
+  "Word": "admettre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449584"
+  },
+  "Word": "admira"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449585"
+  },
+  "Word": "admirable"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449586"
+  },
+  "Word": "admirais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449587"
+  },
+  "Word": "admirait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449588"
+  },
+  "Word": "admirant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449589"
+  },
+  "Word": "admiratif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958a"
+  },
+  "Word": "admire"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958b"
+  },
+  "Word": "admiré"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958c"
+  },
+  "Word": "admirée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958d"
+  },
+  "Word": "admirent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958e"
+  },
+  "Word": "admirent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044958f"
+  },
+  "Word": "admirer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449590"
+  },
+  "Word": "admirez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449591"
+  },
+  "Word": "admis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449592"
+  },
+  "Word": "admis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449593"
+  },
+  "Word": "admis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449594"
+  },
+  "Word": "admise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449595"
+  },
+  "Word": "admise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449596"
+  },
+  "Word": "admission"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449597"
+  },
+  "Word": "admit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449598"
+  },
+  "Word": "ado"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449599"
+  },
+  "Word": "adopta"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959a"
+  },
+  "Word": "adoptait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959b"
+  },
+  "Word": "adopte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959c"
+  },
+  "Word": "adopté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959d"
+  },
+  "Word": "adopté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959e"
+  },
+  "Word": "adopté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044959f"
+  },
+  "Word": "adoptée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a0"
+  },
+  "Word": "adoptée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a1"
+  },
+  "Word": "adoptée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a2"
+  },
+  "Word": "adopter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a3"
+  },
+  "Word": "adoptif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a4"
+  },
+  "Word": "adoption"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a5"
+  },
+  "Word": "adoptions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a6"
+  },
+  "Word": "adoptions"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a7"
+  },
+  "Word": "adoptive"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a8"
+  },
+  "Word": "adorable"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495a9"
+  },
+  "Word": "adorables"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495aa"
+  },
+  "Word": "adoraient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ab"
+  },
+  "Word": "adorais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ac"
+  },
+  "Word": "adorait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ad"
+  },
+  "Word": "adorante"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ae"
+  },
+  "Word": "adorants"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495af"
+  },
+  "Word": "adoration"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b0"
+  },
+  "Word": "adore"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b1"
+  },
+  "Word": "adoré"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b2"
+  },
+  "Word": "adorée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b3"
+  },
+  "Word": "adorent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b4"
+  },
+  "Word": "adorer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b5"
+  },
+  "Word": "adorerais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b6"
+  },
+  "Word": "adorerait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b7"
+  },
+  "Word": "adores"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b8"
+  },
+  "Word": "adorez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495b9"
+  },
+  "Word": "adorons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ba"
+  },
+  "Word": "adossé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495bb"
+  },
+  "Word": "adossé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495bc"
+  },
+  "Word": "adossée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495bd"
+  },
+  "Word": "adossée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495be"
+  },
+  "Word": "adossées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495bf"
+  },
+  "Word": "adosser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c0"
+  },
+  "Word": "adossés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c1"
+  },
+  "Word": "adossés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c2"
+  },
+  "Word": "adouci"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c3"
+  },
+  "Word": "adouci"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c4"
+  },
+  "Word": "adoucie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c5"
+  },
+  "Word": "adoucir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c6"
+  },
+  "Word": "adoucit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c7"
+  },
+  "Word": "adressa"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c8"
+  },
+  "Word": "adressai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495c9"
+  },
+  "Word": "adressais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ca"
+  },
+  "Word": "adressait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495cb"
+  },
+  "Word": "adressant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495cc"
+  },
+  "Word": "adresse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495cd"
+  },
+  "Word": "adresse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ce"
+  },
+  "Word": "adressé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495cf"
+  },
+  "Word": "adressée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d0"
+  },
+  "Word": "adressées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d1"
+  },
+  "Word": "adressent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d2"
+  },
+  "Word": "adresser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d3"
+  },
+  "Word": "adresses"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d4"
+  },
+  "Word": "adresses"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d5"
+  },
+  "Word": "adressez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d6"
+  },
+  "Word": "adroit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d7"
+  },
+  "Word": "adulée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d8"
+  },
+  "Word": "adulent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495d9"
+  },
+  "Word": "adulés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495da"
+  },
+  "Word": "adulte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495db"
+  },
+  "Word": "adulte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495dc"
+  },
+  "Word": "adultère"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495dd"
+  },
+  "Word": "adultère"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495de"
+  },
+  "Word": "adultes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495df"
+  },
+  "Word": "adultes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e0"
+  },
+  "Word": "advenait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e1"
+  },
+  "Word": "advenir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e2"
+  },
+  "Word": "advenu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e3"
+  },
+  "Word": "advenues"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e4"
+  },
+  "Word": "adverse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e5"
+  },
+  "Word": "adverses"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e6"
+  },
+  "Word": "adversité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e7"
+  },
+  "Word": "adviendra"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e8"
+  },
+  "Word": "advient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495e9"
+  },
+  "Word": "aération"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ea"
+  },
+  "Word": "aérée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495eb"
+  },
+  "Word": "aérée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ec"
+  },
+  "Word": "aérer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ed"
+  },
+  "Word": "aérien"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ee"
+  },
+  "Word": "aérien"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ef"
+  },
+  "Word": "aérienne"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f0"
+  },
+  "Word": "aériennes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f1"
+  },
+  "Word": "aériens"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f2"
+  },
+  "Word": "aériens"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f3"
+  },
+  "Word": "aérobic"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f4"
+  },
+  "Word": "aérodrome"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f5"
+  },
+  "Word": "aéroplane"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f6"
+  },
+  "Word": "aéroport"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f7"
+  },
+  "Word": "aéroports"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f8"
+  },
+  "Word": "affables"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495f9"
+  },
+  "Word": "affaibli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495fa"
+  },
+  "Word": "affaibli"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495fb"
+  },
+  "Word": "affaiblie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495fc"
+  },
+  "Word": "affaiblie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495fd"
+  },
+  "Word": "affaiblir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495fe"
+  },
+  "Word": "affaiblis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004495ff"
+  },
+  "Word": "affaiblis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449600"
+  },
+  "Word": "affaiblit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449601"
+  },
+  "Word": "affairait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449602"
+  },
+  "Word": "affaire"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449603"
+  },
+  "Word": "affaire"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449604"
+  },
+  "Word": "affairé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449605"
+  },
+  "Word": "affairé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449606"
+  },
+  "Word": "affairé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449607"
+  },
+  "Word": "affairées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449608"
+  },
+  "Word": "affairées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449609"
+  },
+  "Word": "affairées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960a"
+  },
+  "Word": "affairent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960b"
+  },
+  "Word": "affairer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960c"
+  },
+  "Word": "affaires"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960d"
+  },
+  "Word": "affaires"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960e"
+  },
+  "Word": "affaissa"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044960f"
+  },
+  "Word": "affaissé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449610"
+  },
+  "Word": "affaissée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449611"
+  },
+  "Word": "affala"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449612"
+  },
+  "Word": "affalé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449613"
+  },
+  "Word": "affalée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449614"
+  },
+  "Word": "affaler"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449615"
+  },
+  "Word": "affalés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449616"
+  },
+  "Word": "affamé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449617"
+  },
+  "Word": "affamé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449618"
+  },
+  "Word": "affamé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449619"
+  },
+  "Word": "affamée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961a"
+  },
+  "Word": "affamée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961b"
+  },
+  "Word": "affamée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961c"
+  },
+  "Word": "affamés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961d"
+  },
+  "Word": "affamés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961e"
+  },
+  "Word": "affamés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044961f"
+  },
+  "Word": "affect"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449620"
+  },
+  "Word": "affecta"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449621"
+  },
+  "Word": "affectait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449622"
+  },
+  "Word": "affectant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449623"
+  },
+  "Word": "affecte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449624"
+  },
+  "Word": "affecté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449625"
+  },
+  "Word": "affecté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449626"
+  },
+  "Word": "affectée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449627"
+  },
+  "Word": "affectée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449628"
+  },
+  "Word": "affectent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449629"
+  },
+  "Word": "affecter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962a"
+  },
+  "Word": "affectera"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962b"
+  },
+  "Word": "affectés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962c"
+  },
+  "Word": "affectés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962d"
+  },
+  "Word": "affectif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962e"
+  },
+  "Word": "affection"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044962f"
+  },
+  "Word": "affective"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449630"
+  },
+  "Word": "affermit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449631"
+  },
+  "Word": "affichage"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449632"
+  },
+  "Word": "affichait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449633"
+  },
+  "Word": "affichant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449634"
+  },
+  "Word": "affichant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449635"
+  },
+  "Word": "affiche"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449636"
+  },
+  "Word": "affiche"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449637"
+  },
+  "Word": "affiché"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449638"
+  },
+  "Word": "afficher"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449639"
+  },
+  "Word": "affiches"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963a"
+  },
+  "Word": "affiches"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963b"
+  },
+  "Word": "affinité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963c"
+  },
+  "Word": "affinités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963d"
+  },
+  "Word": "affirma"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963e"
+  },
+  "Word": "affirmai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044963f"
+  },
+  "Word": "affirmais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449640"
+  },
+  "Word": "affirmait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449641"
+  },
+  "Word": "affirmant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449642"
+  },
+  "Word": "affirme"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449643"
+  },
+  "Word": "affirmé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449644"
+  },
+  "Word": "affirment"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449645"
+  },
+  "Word": "affirmer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449646"
+  },
+  "Word": "affirmons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449647"
+  },
+  "Word": "affleurer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449648"
+  },
+  "Word": "affligé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449649"
+  },
+  "Word": "affligé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964a"
+  },
+  "Word": "affluant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964b"
+  },
+  "Word": "affluence"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964c"
+  },
+  "Word": "affluent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964d"
+  },
+  "Word": "affluent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964e"
+  },
+  "Word": "affluent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044964f"
+  },
+  "Word": "affluer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449650"
+  },
+  "Word": "afflux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449651"
+  },
+  "Word": "affola"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449652"
+  },
+  "Word": "affolait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449653"
+  },
+  "Word": "affolant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449654"
+  },
+  "Word": "affolant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449655"
+  },
+  "Word": "affole"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449656"
+  },
+  "Word": "affolé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449657"
+  },
+  "Word": "affolé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449658"
+  },
+  "Word": "affolée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449659"
+  },
+  "Word": "affolée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965a"
+  },
+  "Word": "affoler"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965b"
+  },
+  "Word": "affolés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965c"
+  },
+  "Word": "affolés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965d"
+  },
+  "Word": "affolez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965e"
+  },
+  "Word": "affranchi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044965f"
+  },
+  "Word": "affranchi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449660"
+  },
+  "Word": "affranchi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449661"
+  },
+  "Word": "affreuse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449662"
+  },
+  "Word": "affreuses"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449663"
+  },
+  "Word": "affreux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449664"
+  },
+  "Word": "affreux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449665"
+  },
+  "Word": "affront"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449666"
+  },
+  "Word": "affronta"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449667"
+  },
+  "Word": "affrontai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449668"
+  },
+  "Word": "affronte"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449669"
+  },
+  "Word": "affronté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966a"
+  },
+  "Word": "affronter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966b"
+  },
+  "Word": "affronts"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966c"
+  },
+  "Word": "affublait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966d"
+  },
+  "Word": "affublés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966e"
+  },
+  "Word": "affublés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044966f"
+  },
+  "Word": "affût"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449670"
+  },
+  "Word": "affûtant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449671"
+  },
+  "Word": "affûts"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449672"
+  },
+  "Word": "africain"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449673"
+  },
+  "Word": "africain"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449674"
+  },
+  "Word": "africaine"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449675"
+  },
+  "Word": "africaine"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449676"
+  },
+  "Word": "africains"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449677"
+  },
+  "Word": "africains"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449678"
+  },
+  "Word": "agaça"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449679"
+  },
+  "Word": "agaçaient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967a"
+  },
+  "Word": "agaçait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967b"
+  },
+  "Word": "agaçant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967c"
+  },
+  "Word": "agaçant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967d"
+  },
+  "Word": "agaçante"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967e"
+  },
+  "Word": "agace"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044967f"
+  },
+  "Word": "agace"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449680"
+  },
+  "Word": "agacé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449681"
+  },
+  "Word": "agacée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449682"
+  },
+  "Word": "agacement"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449683"
+  },
+  "Word": "agacent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449684"
+  },
+  "Word": "agacer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449685"
+  },
+  "Word": "age"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449686"
+  },
+  "Word": "âge"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449687"
+  },
+  "Word": "âgé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449688"
+  },
+  "Word": "âgée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449689"
+  },
+  "Word": "âgées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968a"
+  },
+  "Word": "agence"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968b"
+  },
+  "Word": "agence"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968c"
+  },
+  "Word": "agences"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968d"
+  },
+  "Word": "agenda"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968e"
+  },
+  "Word": "agent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044968f"
+  },
+  "Word": "agents"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449690"
+  },
+  "Word": "âges"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449691"
+  },
+  "Word": "âgés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449692"
+  },
+  "Word": "aggravait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449693"
+  },
+  "Word": "aggrave"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449694"
+  },
+  "Word": "aggrave"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449695"
+  },
+  "Word": "aggravé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449696"
+  },
+  "Word": "aggravée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449697"
+  },
+  "Word": "aggravée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449698"
+  },
+  "Word": "aggraver"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449699"
+  },
+  "Word": "agi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969a"
+  },
+  "Word": "agile"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969b"
+  },
+  "Word": "agiles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969c"
+  },
+  "Word": "agilité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969d"
+  },
+  "Word": "agir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969e"
+  },
+  "Word": "agira"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044969f"
+  },
+  "Word": "agirai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a0"
+  },
+  "Word": "agirait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a1"
+  },
+  "Word": "agis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a2"
+  },
+  "Word": "agissait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a3"
+  },
+  "Word": "agissant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a4"
+  },
+  "Word": "agissant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a5"
+  },
+  "Word": "agisse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a6"
+  },
+  "Word": "agissent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a7"
+  },
+  "Word": "agissez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a8"
+  },
+  "Word": "agissons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496a9"
+  },
+  "Word": "agit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496aa"
+  },
+  "Word": "agît"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ab"
+  },
+  "Word": "agita"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ac"
+  },
+  "Word": "agitaient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ad"
+  },
+  "Word": "agitait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ae"
+  },
+  "Word": "agitant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496af"
+  },
+  "Word": "agitant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b0"
+  },
+  "Word": "agitateur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b1"
+  },
+  "Word": "agitation"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b2"
+  },
+  "Word": "agite"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b3"
+  },
+  "Word": "agité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b4"
+  },
+  "Word": "agité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b5"
+  },
+  "Word": "agité"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b6"
+  },
+  "Word": "agitée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b7"
+  },
+  "Word": "agitée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b8"
+  },
+  "Word": "agitée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496b9"
+  },
+  "Word": "agitées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ba"
+  },
+  "Word": "agitées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496bb"
+  },
+  "Word": "agitées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496bc"
+  },
+  "Word": "agitent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496bd"
+  },
+  "Word": "agiter"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496be"
+  },
+  "Word": "agitèrent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496bf"
+  },
+  "Word": "agités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c0"
+  },
+  "Word": "agités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c1"
+  },
+  "Word": "agités"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c2"
+  },
+  "Word": "agneau"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c3"
+  },
+  "Word": "agneaux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c4"
+  },
+  "Word": "agonie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c5"
+  },
+  "Word": "agonie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c6"
+  },
+  "Word": "agonies"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c7"
+  },
+  "Word": "agonisait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c8"
+  },
+  "Word": "agonisant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496c9"
+  },
+  "Word": "agonisant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ca"
+  },
+  "Word": "agonisant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496cb"
+  },
+  "Word": "agonise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496cc"
+  },
+  "Word": "agoniser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496cd"
+  },
+  "Word": "agrafé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ce"
+  },
+  "Word": "agrafes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496cf"
+  },
+  "Word": "agrafes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d0"
+  },
+  "Word": "agrandi"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d1"
+  },
+  "Word": "agrandie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d2"
+  },
+  "Word": "agrandir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d3"
+  },
+  "Word": "agrandis"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d4"
+  },
+  "Word": "agrandit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d5"
+  },
+  "Word": "agréable"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d6"
+  },
+  "Word": "agréable"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d7"
+  },
+  "Word": "agréables"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d8"
+  },
+  "Word": "agréables"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496d9"
+  },
+  "Word": "agréer"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496da"
+  },
+  "Word": "agrégé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496db"
+  },
+  "Word": "agrégé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496dc"
+  },
+  "Word": "agrégé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496dd"
+  },
+  "Word": "agrégées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496de"
+  },
+  "Word": "agrégées"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496df"
+  },
+  "Word": "agrément"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e0"
+  },
+  "Word": "agrémenté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e1"
+  },
+  "Word": "agrémenté"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e2"
+  },
+  "Word": "agréments"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e3"
+  },
+  "Word": "agresse"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e4"
+  },
+  "Word": "agressé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e5"
+  },
+  "Word": "agressée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e6"
+  },
+  "Word": "agresser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e7"
+  },
+  "Word": "agressés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e8"
+  },
+  "Word": "agresseur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496e9"
+  },
+  "Word": "agresseur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ea"
+  },
+  "Word": "agressif"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496eb"
+  },
+  "Word": "agressifs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ec"
+  },
+  "Word": "agression"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ed"
+  },
+  "Word": "agressive"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ee"
+  },
+  "Word": "agricole"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ef"
+  },
+  "Word": "agricoles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f0"
+  },
+  "Word": "agrippa"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f1"
+  },
+  "Word": "agrippait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f2"
+  },
+  "Word": "agrippant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f3"
+  },
+  "Word": "agrippant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f4"
+  },
+  "Word": "agrippe"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f5"
+  },
+  "Word": "agrippé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f6"
+  },
+  "Word": "agrippée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f7"
+  },
+  "Word": "agrippent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f8"
+  },
+  "Word": "agripper"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496f9"
+  },
+  "Word": "aguerri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496fa"
+  },
+  "Word": "aguerri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496fb"
+  },
+  "Word": "aguerries"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496fc"
+  },
+  "Word": "aguerries"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496fd"
+  },
+  "Word": "aguerrit"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496fe"
+  },
+  "Word": "aguicheur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd07004496ff"
+  },
+  "Word": "ahuri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449700"
+  },
+  "Word": "ahuri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449701"
+  },
+  "Word": "ahuri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449702"
+  },
+  "Word": "ahurie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449703"
+  },
+  "Word": "ahurie"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449704"
+  },
+  "Word": "ahuris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449705"
+  },
+  "Word": "ahuris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449706"
+  },
+  "Word": "ahuris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449707"
+  },
+  "Word": "ai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449708"
+  },
+  "Word": "ai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449709"
+  },
+  "Word": "aida"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970a"
+  },
+  "Word": "aidai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970b"
+  },
+  "Word": "aidaient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970c"
+  },
+  "Word": "aidais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970d"
+  },
+  "Word": "aidait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970e"
+  },
+  "Word": "aidant"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044970f"
+  },
+  "Word": "aide"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449710"
+  },
+  "Word": "aide"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449711"
+  },
+  "Word": "aidé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449712"
+  },
+  "Word": "aidée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449713"
+  },
+  "Word": "aident"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449714"
+  },
+  "Word": "aider"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449715"
+  },
+  "Word": "aidera"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449716"
+  },
+  "Word": "aiderai"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449717"
+  },
+  "Word": "aiderais"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449718"
+  },
+  "Word": "aiderait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449719"
+  },
+  "Word": "aideras"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971a"
+  },
+  "Word": "aidèrent"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971b"
+  },
+  "Word": "aiderez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971c"
+  },
+  "Word": "aideriez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971d"
+  },
+  "Word": "aiderons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971e"
+  },
+  "Word": "aideront"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044971f"
+  },
+  "Word": "aides"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449720"
+  },
+  "Word": "aides"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449721"
+  },
+  "Word": "aidés"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449722"
+  },
+  "Word": "aidez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449723"
+  },
+  "Word": "aidiez"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449724"
+  },
+  "Word": "aidons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449725"
+  },
+  "Word": "aient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449726"
+  },
+  "Word": "aient"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449727"
+  },
+  "Word": "aïeul"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449728"
+  },
+  "Word": "aïeule"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449729"
+  },
+  "Word": "aïeux"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972a"
+  },
+  "Word": "aigle"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972b"
+  },
+  "Word": "aigles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972c"
+  },
+  "Word": "aigre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972d"
+  },
+  "Word": "aigre"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972e"
+  },
+  "Word": "aigrement"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044972f"
+  },
+  "Word": "aigres"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449730"
+  },
+  "Word": "aigres"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449731"
+  },
+  "Word": "aigreur"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449732"
+  },
+  "Word": "aigreurs"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449733"
+  },
+  "Word": "aigri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449734"
+  },
+  "Word": "aigri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449735"
+  },
+  "Word": "aigri"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449736"
+  },
+  "Word": "aigrir"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449737"
+  },
+  "Word": "aigris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449738"
+  },
+  "Word": "aigris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449739"
+  },
+  "Word": "aigris"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973a"
+  },
+  "Word": "aigu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973b"
+  },
+  "Word": "aigu"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973c"
+  },
+  "Word": "aigue"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973d"
+  },
+  "Word": "aiguë"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973e"
+  },
+  "Word": "aiguës"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044973f"
+  },
+  "Word": "aiguille"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449740"
+  },
+  "Word": "aiguille"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449741"
+  },
+  "Word": "aiguilles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449742"
+  },
+  "Word": "aiguilles"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449743"
+  },
+  "Word": "aiguillon"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449744"
+  },
+  "Word": "aiguisait"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449745"
+  },
+  "Word": "aiguise"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449746"
+  },
+  "Word": "aiguiser"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449747"
+  },
+  "Word": "aigus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449748"
+  },
+  "Word": "aigus"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449749"
+  },
+  "Word": "ail"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974a"
+  },
+  "Word": "aile"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974b"
+  },
+  "Word": "ailé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974c"
+  },
+  "Word": "ailé"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974d"
+  },
+  "Word": "ailée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974e"
+  },
+  "Word": "ailée"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd070044974f"
+  },
+  "Word": "aileron"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449750"
+  },
+  "Word": "ailerons"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449751"
+  },
+  "Word": "ailes"
+},{
+  "_id": {
+    "$oid": "60a3937e5cecdd0700449752"
+  },
+  "Word": "aille"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449753"
+  },
+  "Word": "aillent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449754"
+  },
+  "Word": "ailleurs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449755"
+  },
+  "Word": "aima"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449756"
+  },
+  "Word": "aimable"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449757"
+  },
+  "Word": "aimables"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449758"
+  },
+  "Word": "aimaient"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449759"
+  },
+  "Word": "aimais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975a"
+  },
+  "Word": "aimait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975b"
+  },
+  "Word": "aimant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975c"
+  },
+  "Word": "aimant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975d"
+  },
+  "Word": "aimant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975e"
+  },
+  "Word": "aimante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044975f"
+  },
+  "Word": "aimante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449760"
+  },
+  "Word": "aimanté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449761"
+  },
+  "Word": "aimantées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449762"
+  },
+  "Word": "aimants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449763"
+  },
+  "Word": "aimants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449764"
+  },
+  "Word": "aime"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449765"
+  },
+  "Word": "aimé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449766"
+  },
+  "Word": "aimé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449767"
+  },
+  "Word": "aimée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449768"
+  },
+  "Word": "aimée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449769"
+  },
+  "Word": "aimées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976a"
+  },
+  "Word": "aimées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976b"
+  },
+  "Word": "aiment"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976c"
+  },
+  "Word": "aimer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976d"
+  },
+  "Word": "aimera"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976e"
+  },
+  "Word": "aimerai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044976f"
+  },
+  "Word": "aimerais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449770"
+  },
+  "Word": "aimerait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449771"
+  },
+  "Word": "aimeras"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449772"
+  },
+  "Word": "aimerez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449773"
+  },
+  "Word": "aimeriez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449774"
+  },
+  "Word": "aimerions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449775"
+  },
+  "Word": "aimeront"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449776"
+  },
+  "Word": "aimes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449777"
+  },
+  "Word": "aimés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449778"
+  },
+  "Word": "aimés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449779"
+  },
+  "Word": "aimez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977a"
+  },
+  "Word": "aimiez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977b"
+  },
+  "Word": "aimions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977c"
+  },
+  "Word": "aimons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977d"
+  },
+  "Word": "aîné"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977e"
+  },
+  "Word": "aîné"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044977f"
+  },
+  "Word": "aînée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449780"
+  },
+  "Word": "aînée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449781"
+  },
+  "Word": "aînées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449782"
+  },
+  "Word": "aînées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449783"
+  },
+  "Word": "aînés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449784"
+  },
+  "Word": "aînés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449785"
+  },
+  "Word": "ainsi"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449786"
+  },
+  "Word": "air"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449787"
+  },
+  "Word": "aire"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449788"
+  },
+  "Word": "aires"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449789"
+  },
+  "Word": "airs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978a"
+  },
+  "Word": "aisance"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978b"
+  },
+  "Word": "aise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978c"
+  },
+  "Word": "aise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978d"
+  },
+  "Word": "aisé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978e"
+  },
+  "Word": "aisée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044978f"
+  },
+  "Word": "aisément"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449790"
+  },
+  "Word": "aises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449791"
+  },
+  "Word": "aises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449792"
+  },
+  "Word": "aisés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449793"
+  },
+  "Word": "aisselle"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449794"
+  },
+  "Word": "aisselles"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449795"
+  },
+  "Word": "ait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449796"
+  },
+  "Word": "ait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449797"
+  },
+  "Word": "ajouta"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449798"
+  },
+  "Word": "ajoutai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449799"
+  },
+  "Word": "ajoutais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979a"
+  },
+  "Word": "ajoutait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979b"
+  },
+  "Word": "ajoutant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979c"
+  },
+  "Word": "ajoute"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979d"
+  },
+  "Word": "ajoute"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979e"
+  },
+  "Word": "ajouté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044979f"
+  },
+  "Word": "ajouté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a0"
+  },
+  "Word": "ajouté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a1"
+  },
+  "Word": "ajoutent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a2"
+  },
+  "Word": "ajouter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a3"
+  },
+  "Word": "ajouterai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a4"
+  },
+  "Word": "ajoutez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a5"
+  },
+  "Word": "ajoutons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a6"
+  },
+  "Word": "ajusta"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a7"
+  },
+  "Word": "ajustant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a8"
+  },
+  "Word": "ajuste"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497a9"
+  },
+  "Word": "ajusté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497aa"
+  },
+  "Word": "ajusté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ab"
+  },
+  "Word": "ajustée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ac"
+  },
+  "Word": "ajustée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ad"
+  },
+  "Word": "ajustées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ae"
+  },
+  "Word": "ajustées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497af"
+  },
+  "Word": "ajuster"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b0"
+  },
+  "Word": "ajustez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b1"
+  },
+  "Word": "alarmait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b2"
+  },
+  "Word": "alarme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b3"
+  },
+  "Word": "alarme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b4"
+  },
+  "Word": "alarmé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b5"
+  },
+  "Word": "alarmer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b6"
+  },
+  "Word": "alarmes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b7"
+  },
+  "Word": "alarmes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b8"
+  },
+  "Word": "alarmés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497b9"
+  },
+  "Word": "alarmez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ba"
+  },
+  "Word": "albatros"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497bb"
+  },
+  "Word": "album"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497bc"
+  },
+  "Word": "albums"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497bd"
+  },
+  "Word": "alchimie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497be"
+  },
+  "Word": "alcool"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497bf"
+  },
+  "Word": "alcoolo"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c0"
+  },
+  "Word": "alcoolo"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c1"
+  },
+  "Word": "alcools"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c2"
+  },
+  "Word": "aléatoire"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c3"
+  },
+  "Word": "alentour"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c4"
+  },
+  "Word": "alentours"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c5"
+  },
+  "Word": "alerte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c6"
+  },
+  "Word": "alerte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c7"
+  },
+  "Word": "alerte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c8"
+  },
+  "Word": "alerte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497c9"
+  },
+  "Word": "alerte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ca"
+  },
+  "Word": "alerté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497cb"
+  },
+  "Word": "alerté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497cc"
+  },
+  "Word": "alertée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497cd"
+  },
+  "Word": "alertée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ce"
+  },
+  "Word": "alertées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497cf"
+  },
+  "Word": "alertées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d0"
+  },
+  "Word": "alerter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d1"
+  },
+  "Word": "alertes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d2"
+  },
+  "Word": "alertes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d3"
+  },
+  "Word": "alertes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d4"
+  },
+  "Word": "alertés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d5"
+  },
+  "Word": "alertés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d6"
+  },
+  "Word": "alertez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d7"
+  },
+  "Word": "algèbre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d8"
+  },
+  "Word": "algue"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497d9"
+  },
+  "Word": "algues"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497da"
+  },
+  "Word": "alias"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497db"
+  },
+  "Word": "alibi"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497dc"
+  },
+  "Word": "aliénés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497dd"
+  },
+  "Word": "aliénés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497de"
+  },
+  "Word": "aliénés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497df"
+  },
+  "Word": "alignait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e0"
+  },
+  "Word": "aligne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e1"
+  },
+  "Word": "aligné"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e2"
+  },
+  "Word": "aligné"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e3"
+  },
+  "Word": "alignées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e4"
+  },
+  "Word": "alignées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e5"
+  },
+  "Word": "alignent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e6"
+  },
+  "Word": "aligner"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e7"
+  },
+  "Word": "alignés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e8"
+  },
+  "Word": "alignés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497e9"
+  },
+  "Word": "alignez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ea"
+  },
+  "Word": "aliment"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497eb"
+  },
+  "Word": "alimente"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ec"
+  },
+  "Word": "alimenté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ed"
+  },
+  "Word": "alimenter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ee"
+  },
+  "Word": "aliments"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ef"
+  },
+  "Word": "alla"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f0"
+  },
+  "Word": "allai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f1"
+  },
+  "Word": "allaient"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f2"
+  },
+  "Word": "allais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f3"
+  },
+  "Word": "allait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f4"
+  },
+  "Word": "allant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f5"
+  },
+  "Word": "allant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f6"
+  },
+  "Word": "allant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f7"
+  },
+  "Word": "allât"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f8"
+  },
+  "Word": "allé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497f9"
+  },
+  "Word": "alléchant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497fa"
+  },
+  "Word": "alléchant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497fb"
+  },
+  "Word": "alléché"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497fc"
+  },
+  "Word": "alléchés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497fd"
+  },
+  "Word": "allée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497fe"
+  },
+  "Word": "allée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004497ff"
+  },
+  "Word": "allées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449800"
+  },
+  "Word": "allées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449801"
+  },
+  "Word": "allégé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449802"
+  },
+  "Word": "allégée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449803"
+  },
+  "Word": "alléger"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449804"
+  },
+  "Word": "allégorie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449805"
+  },
+  "Word": "allègre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449806"
+  },
+  "Word": "allègres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449807"
+  },
+  "Word": "alléluia"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449808"
+  },
+  "Word": "alléluia"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449809"
+  },
+  "Word": "allemand"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980a"
+  },
+  "Word": "allemand"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980b"
+  },
+  "Word": "allemande"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980c"
+  },
+  "Word": "allemande"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980d"
+  },
+  "Word": "allemands"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980e"
+  },
+  "Word": "allemands"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044980f"
+  },
+  "Word": "aller"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449810"
+  },
+  "Word": "aller"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449811"
+  },
+  "Word": "allèrent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449812"
+  },
+  "Word": "allergie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449813"
+  },
+  "Word": "allergies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449814"
+  },
+  "Word": "allés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449815"
+  },
+  "Word": "allez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449816"
+  },
+  "Word": "allez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449817"
+  },
+  "Word": "alliage"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449818"
+  },
+  "Word": "alliance"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449819"
+  },
+  "Word": "alliances"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981a"
+  },
+  "Word": "allié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981b"
+  },
+  "Word": "allié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981c"
+  },
+  "Word": "allié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981d"
+  },
+  "Word": "alliée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981e"
+  },
+  "Word": "alliée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044981f"
+  },
+  "Word": "alliée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449820"
+  },
+  "Word": "alliées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449821"
+  },
+  "Word": "alliées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449822"
+  },
+  "Word": "alliées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449823"
+  },
+  "Word": "allier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449824"
+  },
+  "Word": "allier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449825"
+  },
+  "Word": "allier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449826"
+  },
+  "Word": "alliés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449827"
+  },
+  "Word": "alliés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449828"
+  },
+  "Word": "alliés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449829"
+  },
+  "Word": "alliez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982a"
+  },
+  "Word": "alligator"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982b"
+  },
+  "Word": "allions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982c"
+  },
+  "Word": "allonge"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982d"
+  },
+  "Word": "allonge"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982e"
+  },
+  "Word": "allongé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044982f"
+  },
+  "Word": "allongé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449830"
+  },
+  "Word": "allongea"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449831"
+  },
+  "Word": "allongée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449832"
+  },
+  "Word": "allongée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449833"
+  },
+  "Word": "allongées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449834"
+  },
+  "Word": "allongées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449835"
+  },
+  "Word": "allongent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449836"
+  },
+  "Word": "allonger"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449837"
+  },
+  "Word": "allongés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449838"
+  },
+  "Word": "allongés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449839"
+  },
+  "Word": "allongez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983a"
+  },
+  "Word": "allons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983b"
+  },
+  "Word": "allouait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983c"
+  },
+  "Word": "alluma"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983d"
+  },
+  "Word": "allumage"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983e"
+  },
+  "Word": "allumai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044983f"
+  },
+  "Word": "allumais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449840"
+  },
+  "Word": "allumait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449841"
+  },
+  "Word": "allumant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449842"
+  },
+  "Word": "allume"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449843"
+  },
+  "Word": "allumé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449844"
+  },
+  "Word": "allumé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449845"
+  },
+  "Word": "allumé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449846"
+  },
+  "Word": "allumée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449847"
+  },
+  "Word": "allumée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449848"
+  },
+  "Word": "allumée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449849"
+  },
+  "Word": "allumées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984a"
+  },
+  "Word": "allumées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984b"
+  },
+  "Word": "allumées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984c"
+  },
+  "Word": "allument"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984d"
+  },
+  "Word": "allumer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984e"
+  },
+  "Word": "allumes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044984f"
+  },
+  "Word": "allumés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449850"
+  },
+  "Word": "allumés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449851"
+  },
+  "Word": "allumés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449852"
+  },
+  "Word": "allumette"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449853"
+  },
+  "Word": "allumeuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449854"
+  },
+  "Word": "allumez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449855"
+  },
+  "Word": "allure"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449856"
+  },
+  "Word": "allures"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449857"
+  },
+  "Word": "allusion"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449858"
+  },
+  "Word": "allusions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449859"
+  },
+  "Word": "alors"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985a"
+  },
+  "Word": "alouette"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985b"
+  },
+  "Word": "alourdi"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985c"
+  },
+  "Word": "alourdie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985d"
+  },
+  "Word": "alourdies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985e"
+  },
+  "Word": "alourdir"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044985f"
+  },
+  "Word": "alourdis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449860"
+  },
+  "Word": "alourdit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449861"
+  },
+  "Word": "alpha"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449862"
+  },
+  "Word": "alphabet"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449863"
+  },
+  "Word": "alpin"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449864"
+  },
+  "Word": "alpine"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449865"
+  },
+  "Word": "alpiniste"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449866"
+  },
+  "Word": "alpins"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449867"
+  },
+  "Word": "alsacien"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449868"
+  },
+  "Word": "alsacien"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449869"
+  },
+  "Word": "altéré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986a"
+  },
+  "Word": "altéré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986b"
+  },
+  "Word": "altérée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986c"
+  },
+  "Word": "altérée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986d"
+  },
+  "Word": "altérer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986e"
+  },
+  "Word": "alternant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044986f"
+  },
+  "Word": "alternant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449870"
+  },
+  "Word": "altesse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449871"
+  },
+  "Word": "altesses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449872"
+  },
+  "Word": "altitude"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449873"
+  },
+  "Word": "altruisme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449874"
+  },
+  "Word": "aluminium"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449875"
+  },
+  "Word": "alvéole"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449876"
+  },
+  "Word": "alvéoles"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449877"
+  },
+  "Word": "amabilité"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449878"
+  },
+  "Word": "amadouer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449879"
+  },
+  "Word": "amaigri"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987a"
+  },
+  "Word": "amaigri"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987b"
+  },
+  "Word": "amande"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987c"
+  },
+  "Word": "amandes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987d"
+  },
+  "Word": "amandiers"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987e"
+  },
+  "Word": "amant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044987f"
+  },
+  "Word": "amante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449880"
+  },
+  "Word": "amantes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449881"
+  },
+  "Word": "amants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449882"
+  },
+  "Word": "amarrage"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449883"
+  },
+  "Word": "amarre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449884"
+  },
+  "Word": "amarre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449885"
+  },
+  "Word": "amarré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449886"
+  },
+  "Word": "amarrer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449887"
+  },
+  "Word": "amarres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449888"
+  },
+  "Word": "amarres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449889"
+  },
+  "Word": "amas"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988a"
+  },
+  "Word": "amassé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988b"
+  },
+  "Word": "amasser"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988c"
+  },
+  "Word": "amateur"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988d"
+  },
+  "Word": "amateur"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988e"
+  },
+  "Word": "amateurs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044988f"
+  },
+  "Word": "amateurs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449890"
+  },
+  "Word": "amazone"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449891"
+  },
+  "Word": "amazonien"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449892"
+  },
+  "Word": "ambassade"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449893"
+  },
+  "Word": "ambiance"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449894"
+  },
+  "Word": "ambiant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449895"
+  },
+  "Word": "ambiante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449896"
+  },
+  "Word": "ambigu"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449897"
+  },
+  "Word": "ambiguë"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449898"
+  },
+  "Word": "ambiguïté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449899"
+  },
+  "Word": "ambigus"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989a"
+  },
+  "Word": "ambitieux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989b"
+  },
+  "Word": "ambitieux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989c"
+  },
+  "Word": "ambition"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989d"
+  },
+  "Word": "ambitions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989e"
+  },
+  "Word": "ambre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044989f"
+  },
+  "Word": "ambré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a0"
+  },
+  "Word": "ambré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a1"
+  },
+  "Word": "ambrée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a2"
+  },
+  "Word": "ambrée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a3"
+  },
+  "Word": "ambulance"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a4"
+  },
+  "Word": "ambulant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a5"
+  },
+  "Word": "ambulant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a6"
+  },
+  "Word": "ambulante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a7"
+  },
+  "Word": "ambulants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a8"
+  },
+  "Word": "ambulants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498a9"
+  },
+  "Word": "âme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498aa"
+  },
+  "Word": "améliore"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ab"
+  },
+  "Word": "amélioré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ac"
+  },
+  "Word": "amélioré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ad"
+  },
+  "Word": "améliorée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ae"
+  },
+  "Word": "améliorée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498af"
+  },
+  "Word": "améliorer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b0"
+  },
+  "Word": "amena"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b1"
+  },
+  "Word": "aménagé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b2"
+  },
+  "Word": "aménagée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b3"
+  },
+  "Word": "aménager"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b4"
+  },
+  "Word": "amenaient"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b5"
+  },
+  "Word": "amenait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b6"
+  },
+  "Word": "amenant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b7"
+  },
+  "Word": "amendait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b8"
+  },
+  "Word": "amende"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498b9"
+  },
+  "Word": "amende"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ba"
+  },
+  "Word": "amendé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498bb"
+  },
+  "Word": "amendes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498bc"
+  },
+  "Word": "amendes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498bd"
+  },
+  "Word": "amené"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498be"
+  },
+  "Word": "amène"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498bf"
+  },
+  "Word": "amène"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c0"
+  },
+  "Word": "amenée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c1"
+  },
+  "Word": "amenée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c2"
+  },
+  "Word": "amènent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c3"
+  },
+  "Word": "amener"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c4"
+  },
+  "Word": "amènera"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c5"
+  },
+  "Word": "amènerai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c6"
+  },
+  "Word": "amènerais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c7"
+  },
+  "Word": "amènerait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c8"
+  },
+  "Word": "amenèrent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498c9"
+  },
+  "Word": "amenés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ca"
+  },
+  "Word": "amènes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498cb"
+  },
+  "Word": "amènes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498cc"
+  },
+  "Word": "amenez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498cd"
+  },
+  "Word": "amenons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ce"
+  },
+  "Word": "amer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498cf"
+  },
+  "Word": "amer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d0"
+  },
+  "Word": "amère"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d1"
+  },
+  "Word": "amères"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d2"
+  },
+  "Word": "américain"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d3"
+  },
+  "Word": "américain"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d4"
+  },
+  "Word": "amers"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d5"
+  },
+  "Word": "amers"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d6"
+  },
+  "Word": "amertume"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d7"
+  },
+  "Word": "âmes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d8"
+  },
+  "Word": "ami"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498d9"
+  },
+  "Word": "ami"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498da"
+  },
+  "Word": "amiable"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498db"
+  },
+  "Word": "amiante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498dc"
+  },
+  "Word": "amical"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498dd"
+  },
+  "Word": "amicale"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498de"
+  },
+  "Word": "amicale"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498df"
+  },
+  "Word": "amicales"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e0"
+  },
+  "Word": "amicales"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e1"
+  },
+  "Word": "amicales"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e2"
+  },
+  "Word": "amicaux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e3"
+  },
+  "Word": "amie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e4"
+  },
+  "Word": "amie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e5"
+  },
+  "Word": "amies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e6"
+  },
+  "Word": "amies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e7"
+  },
+  "Word": "amiral"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e8"
+  },
+  "Word": "amiral"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498e9"
+  },
+  "Word": "amis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ea"
+  },
+  "Word": "amis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498eb"
+  },
+  "Word": "amitié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ec"
+  },
+  "Word": "amitiés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ed"
+  },
+  "Word": "amnésie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ee"
+  },
+  "Word": "amnésique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ef"
+  },
+  "Word": "amnésique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f0"
+  },
+  "Word": "amoché"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f1"
+  },
+  "Word": "amocher"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f2"
+  },
+  "Word": "amochez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f3"
+  },
+  "Word": "amont"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f4"
+  },
+  "Word": "amont"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f5"
+  },
+  "Word": "amorçage"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f6"
+  },
+  "Word": "amorçait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f7"
+  },
+  "Word": "amorce"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f8"
+  },
+  "Word": "amorce"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498f9"
+  },
+  "Word": "amorcé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498fa"
+  },
+  "Word": "amorcée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498fb"
+  },
+  "Word": "amorcer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498fc"
+  },
+  "Word": "amorties"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498fd"
+  },
+  "Word": "amorties"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498fe"
+  },
+  "Word": "amortir"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004498ff"
+  },
+  "Word": "amour"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449900"
+  },
+  "Word": "amoureuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449901"
+  },
+  "Word": "amoureuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449902"
+  },
+  "Word": "amoureux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449903"
+  },
+  "Word": "amoureux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449904"
+  },
+  "Word": "amours"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449905"
+  },
+  "Word": "amphore"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449906"
+  },
+  "Word": "ample"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449907"
+  },
+  "Word": "amplement"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449908"
+  },
+  "Word": "amples"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449909"
+  },
+  "Word": "ampleur"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990a"
+  },
+  "Word": "amplifie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990b"
+  },
+  "Word": "amplifiés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990c"
+  },
+  "Word": "amplitude"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990d"
+  },
+  "Word": "ampoule"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990e"
+  },
+  "Word": "ampoules"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044990f"
+  },
+  "Word": "amputa"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449910"
+  },
+  "Word": "amputer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449911"
+  },
+  "Word": "amputerai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449912"
+  },
+  "Word": "amulette"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449913"
+  },
+  "Word": "amusa"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449914"
+  },
+  "Word": "amusaient"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449915"
+  },
+  "Word": "amusais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449916"
+  },
+  "Word": "amusait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449917"
+  },
+  "Word": "amusant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449918"
+  },
+  "Word": "amusant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449919"
+  },
+  "Word": "amusante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991a"
+  },
+  "Word": "amusantes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991b"
+  },
+  "Word": "amusants"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991c"
+  },
+  "Word": "amuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991d"
+  },
+  "Word": "amusé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991e"
+  },
+  "Word": "amusée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044991f"
+  },
+  "Word": "amusement"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449920"
+  },
+  "Word": "amusent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449921"
+  },
+  "Word": "amuser"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449922"
+  },
+  "Word": "amusera"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449923"
+  },
+  "Word": "amuserait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449924"
+  },
+  "Word": "amuses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449925"
+  },
+  "Word": "amusés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449926"
+  },
+  "Word": "amusez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449927"
+  },
+  "Word": "amusons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449928"
+  },
+  "Word": "an"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449929"
+  },
+  "Word": "anal"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992a"
+  },
+  "Word": "analogie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992b"
+  },
+  "Word": "analogue"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992c"
+  },
+  "Word": "analogue"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992d"
+  },
+  "Word": "analogues"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992e"
+  },
+  "Word": "analogues"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044992f"
+  },
+  "Word": "analysais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449930"
+  },
+  "Word": "analyse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449931"
+  },
+  "Word": "analyse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449932"
+  },
+  "Word": "analysé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449933"
+  },
+  "Word": "analysé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449934"
+  },
+  "Word": "analyser"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449935"
+  },
+  "Word": "analyses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449936"
+  },
+  "Word": "analyses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449937"
+  },
+  "Word": "analyste"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449938"
+  },
+  "Word": "ananas"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449939"
+  },
+  "Word": "anarchie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993a"
+  },
+  "Word": "anatomie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993b"
+  },
+  "Word": "ancestral"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993c"
+  },
+  "Word": "ancêtre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993d"
+  },
+  "Word": "ancêtres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993e"
+  },
+  "Word": "anchois"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044993f"
+  },
+  "Word": "ancien"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449940"
+  },
+  "Word": "ancien"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449941"
+  },
+  "Word": "ancienne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449942"
+  },
+  "Word": "ancienne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449943"
+  },
+  "Word": "anciennes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449944"
+  },
+  "Word": "anciennes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449945"
+  },
+  "Word": "anciens"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449946"
+  },
+  "Word": "anciens"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449947"
+  },
+  "Word": "ancrage"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449948"
+  },
+  "Word": "ancre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449949"
+  },
+  "Word": "ancre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994a"
+  },
+  "Word": "ancré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994b"
+  },
+  "Word": "ancré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994c"
+  },
+  "Word": "ancrée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994d"
+  },
+  "Word": "ancrée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994e"
+  },
+  "Word": "ancres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044994f"
+  },
+  "Word": "ancres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449950"
+  },
+  "Word": "andouille"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449951"
+  },
+  "Word": "âne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449952"
+  },
+  "Word": "anéanti"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449953"
+  },
+  "Word": "anéantie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449954"
+  },
+  "Word": "anéantir"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449955"
+  },
+  "Word": "anéantis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449956"
+  },
+  "Word": "anecdote"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449957"
+  },
+  "Word": "anecdotes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449958"
+  },
+  "Word": "anémie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449959"
+  },
+  "Word": "anémie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995a"
+  },
+  "Word": "anémiques"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995b"
+  },
+  "Word": "anémones"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995c"
+  },
+  "Word": "âneries"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995d"
+  },
+  "Word": "ânes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995e"
+  },
+  "Word": "ange"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044995f"
+  },
+  "Word": "angélique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449960"
+  },
+  "Word": "angélique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449961"
+  },
+  "Word": "anges"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449962"
+  },
+  "Word": "angine"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449963"
+  },
+  "Word": "anglais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449964"
+  },
+  "Word": "anglais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449965"
+  },
+  "Word": "anglais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449966"
+  },
+  "Word": "anglaise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449967"
+  },
+  "Word": "anglaise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449968"
+  },
+  "Word": "anglaises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449969"
+  },
+  "Word": "anglaises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996a"
+  },
+  "Word": "angle"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996b"
+  },
+  "Word": "angles"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996c"
+  },
+  "Word": "angoisse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996d"
+  },
+  "Word": "angoisse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996e"
+  },
+  "Word": "angoissé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044996f"
+  },
+  "Word": "angoissé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449970"
+  },
+  "Word": "angoissé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449971"
+  },
+  "Word": "angoissée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449972"
+  },
+  "Word": "angoissée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449973"
+  },
+  "Word": "angoissée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449974"
+  },
+  "Word": "angoisses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449975"
+  },
+  "Word": "angoisses"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449976"
+  },
+  "Word": "anguille"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449977"
+  },
+  "Word": "anguilles"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449978"
+  },
+  "Word": "anima"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449979"
+  },
+  "Word": "animaient"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997a"
+  },
+  "Word": "animait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997b"
+  },
+  "Word": "animal"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997c"
+  },
+  "Word": "animal"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997d"
+  },
+  "Word": "animale"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997e"
+  },
+  "Word": "animales"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044997f"
+  },
+  "Word": "animalier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449980"
+  },
+  "Word": "animalier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449981"
+  },
+  "Word": "animalité"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449982"
+  },
+  "Word": "animateur"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449983"
+  },
+  "Word": "animation"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449984"
+  },
+  "Word": "animaux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449985"
+  },
+  "Word": "animaux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449986"
+  },
+  "Word": "anime"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449987"
+  },
+  "Word": "animé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449988"
+  },
+  "Word": "animé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449989"
+  },
+  "Word": "animée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998a"
+  },
+  "Word": "animée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998b"
+  },
+  "Word": "animées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998c"
+  },
+  "Word": "animées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998d"
+  },
+  "Word": "animent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998e"
+  },
+  "Word": "animer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044998f"
+  },
+  "Word": "animés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449990"
+  },
+  "Word": "animés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449991"
+  },
+  "Word": "animosité"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449992"
+  },
+  "Word": "anis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449993"
+  },
+  "Word": "annales"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449994"
+  },
+  "Word": "anneau"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449995"
+  },
+  "Word": "anneaux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449996"
+  },
+  "Word": "année"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449997"
+  },
+  "Word": "années"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449998"
+  },
+  "Word": "annexe"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449999"
+  },
+  "Word": "annexe"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999a"
+  },
+  "Word": "annexe"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999b"
+  },
+  "Word": "annonça"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999c"
+  },
+  "Word": "annonçai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999d"
+  },
+  "Word": "annonçais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999e"
+  },
+  "Word": "annonçait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd070044999f"
+  },
+  "Word": "annonçant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a0"
+  },
+  "Word": "annonce"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a1"
+  },
+  "Word": "annonce"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a2"
+  },
+  "Word": "annoncé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a3"
+  },
+  "Word": "annoncée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a4"
+  },
+  "Word": "annoncent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a5"
+  },
+  "Word": "annoncer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a6"
+  },
+  "Word": "annonces"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a7"
+  },
+  "Word": "annonces"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a8"
+  },
+  "Word": "annoncez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499a9"
+  },
+  "Word": "annonçons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499aa"
+  },
+  "Word": "annuaire"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ab"
+  },
+  "Word": "annuel"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ac"
+  },
+  "Word": "annuelle"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ad"
+  },
+  "Word": "annulaire"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ae"
+  },
+  "Word": "annulaire"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499af"
+  },
+  "Word": "annulant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b0"
+  },
+  "Word": "annule"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b1"
+  },
+  "Word": "annulé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b2"
+  },
+  "Word": "annulé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b3"
+  },
+  "Word": "annulée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b4"
+  },
+  "Word": "annulée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b5"
+  },
+  "Word": "annuler"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b6"
+  },
+  "Word": "annulerai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b7"
+  },
+  "Word": "annulez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b8"
+  },
+  "Word": "annulons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499b9"
+  },
+  "Word": "anodin"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ba"
+  },
+  "Word": "anodine"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499bb"
+  },
+  "Word": "anodines"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499bc"
+  },
+  "Word": "anodins"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499bd"
+  },
+  "Word": "anomalie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499be"
+  },
+  "Word": "anomalies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499bf"
+  },
+  "Word": "anonymat"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c0"
+  },
+  "Word": "anonyme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c1"
+  },
+  "Word": "anonyme"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c2"
+  },
+  "Word": "anonymes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c3"
+  },
+  "Word": "anonymes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c4"
+  },
+  "Word": "anormal"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c5"
+  },
+  "Word": "anormal"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c6"
+  },
+  "Word": "anormale"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c7"
+  },
+  "Word": "anormale"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c8"
+  },
+  "Word": "ans"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499c9"
+  },
+  "Word": "antenne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ca"
+  },
+  "Word": "antennes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499cb"
+  },
+  "Word": "antérieur"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499cc"
+  },
+  "Word": "antichoc"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499cd"
+  },
+  "Word": "anticorps"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ce"
+  },
+  "Word": "antidote"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499cf"
+  },
+  "Word": "antillais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d0"
+  },
+  "Word": "antillais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d1"
+  },
+  "Word": "antilope"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d2"
+  },
+  "Word": "antipodes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d3"
+  },
+  "Word": "antique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d4"
+  },
+  "Word": "antique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d5"
+  },
+  "Word": "antiques"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d6"
+  },
+  "Word": "antiques"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d7"
+  },
+  "Word": "antiquité"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d8"
+  },
+  "Word": "anus"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499d9"
+  },
+  "Word": "anxiété"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499da"
+  },
+  "Word": "anxieuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499db"
+  },
+  "Word": "anxieuse"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499dc"
+  },
+  "Word": "anxieux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499dd"
+  },
+  "Word": "anxieux"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499de"
+  },
+  "Word": "août"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499df"
+  },
+  "Word": "apache"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e0"
+  },
+  "Word": "apache"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e1"
+  },
+  "Word": "apaches"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e2"
+  },
+  "Word": "apaches"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e3"
+  },
+  "Word": "apaisa"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e4"
+  },
+  "Word": "apaisait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e5"
+  },
+  "Word": "apaisant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e6"
+  },
+  "Word": "apaisant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e7"
+  },
+  "Word": "apaisante"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e8"
+  },
+  "Word": "apaise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499e9"
+  },
+  "Word": "apaisé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ea"
+  },
+  "Word": "apaisée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499eb"
+  },
+  "Word": "apaisées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ec"
+  },
+  "Word": "apaiser"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ed"
+  },
+  "Word": "apaisés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ee"
+  },
+  "Word": "apathie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ef"
+  },
+  "Word": "apercevra"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f0"
+  },
+  "Word": "aperçois"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f1"
+  },
+  "Word": "aperçoit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f2"
+  },
+  "Word": "aperçoive"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f3"
+  },
+  "Word": "aperçu"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f4"
+  },
+  "Word": "aperçu"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f5"
+  },
+  "Word": "aperçue"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f6"
+  },
+  "Word": "aperçus"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f7"
+  },
+  "Word": "aperçus"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f8"
+  },
+  "Word": "aperçut"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499f9"
+  },
+  "Word": "aperçût"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499fa"
+  },
+  "Word": "apéritif"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499fb"
+  },
+  "Word": "apéritif"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499fc"
+  },
+  "Word": "apéritifs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499fd"
+  },
+  "Word": "apéritifs"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499fe"
+  },
+  "Word": "apéro"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd07004499ff"
+  },
+  "Word": "apeuré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a00"
+  },
+  "Word": "apeuré"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a01"
+  },
+  "Word": "apeurée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a02"
+  },
+  "Word": "apeurée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a03"
+  },
+  "Word": "apeurés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a04"
+  },
+  "Word": "apeurés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a05"
+  },
+  "Word": "apitoyé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a06"
+  },
+  "Word": "apitoyer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a07"
+  },
+  "Word": "aplati"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a08"
+  },
+  "Word": "aplati"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a09"
+  },
+  "Word": "aplatie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0a"
+  },
+  "Word": "aplatie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0b"
+  },
+  "Word": "aplatir"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0c"
+  },
+  "Word": "aplatirez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0d"
+  },
+  "Word": "aplatis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0e"
+  },
+  "Word": "aplatis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a0f"
+  },
+  "Word": "aplatit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a10"
+  },
+  "Word": "aplomb"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a11"
+  },
+  "Word": "apogée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a12"
+  },
+  "Word": "apologie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a13"
+  },
+  "Word": "apothéose"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a14"
+  },
+  "Word": "apôtre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a15"
+  },
+  "Word": "apôtres"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a16"
+  },
+  "Word": "apparais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a17"
+  },
+  "Word": "apparaît"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a18"
+  },
+  "Word": "appareil"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a19"
+  },
+  "Word": "appareils"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1a"
+  },
+  "Word": "apparence"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1b"
+  },
+  "Word": "apparent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1c"
+  },
+  "Word": "apparente"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1d"
+  },
+  "Word": "apparente"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1e"
+  },
+  "Word": "apparents"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a1f"
+  },
+  "Word": "appartenu"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a20"
+  },
+  "Word": "apparts"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a21"
+  },
+  "Word": "apparu"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a22"
+  },
+  "Word": "apparue"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a23"
+  },
+  "Word": "apparues"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a24"
+  },
+  "Word": "apparus"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a25"
+  },
+  "Word": "apparut"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a26"
+  },
+  "Word": "appât"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a27"
+  },
+  "Word": "appâté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a28"
+  },
+  "Word": "appâter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a29"
+  },
+  "Word": "appâts"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2a"
+  },
+  "Word": "appel"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2b"
+  },
+  "Word": "appela"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2c"
+  },
+  "Word": "appelai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2d"
+  },
+  "Word": "appelais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2e"
+  },
+  "Word": "appelait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a2f"
+  },
+  "Word": "appelant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a30"
+  },
+  "Word": "appelant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a31"
+  },
+  "Word": "appelant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a32"
+  },
+  "Word": "appelé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a33"
+  },
+  "Word": "appelé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a34"
+  },
+  "Word": "appelée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a35"
+  },
+  "Word": "appelées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a36"
+  },
+  "Word": "appeler"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a37"
+  },
+  "Word": "appelés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a38"
+  },
+  "Word": "appelés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a39"
+  },
+  "Word": "appelez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3a"
+  },
+  "Word": "appeliez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3b"
+  },
+  "Word": "appelions"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3c"
+  },
+  "Word": "appelle"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3d"
+  },
+  "Word": "appellent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3e"
+  },
+  "Word": "appellera"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a3f"
+  },
+  "Word": "appelles"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a40"
+  },
+  "Word": "appelons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a41"
+  },
+  "Word": "appels"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a42"
+  },
+  "Word": "appendice"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a43"
+  },
+  "Word": "appétit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a44"
+  },
+  "Word": "appétits"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a45"
+  },
+  "Word": "applaudi"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a46"
+  },
+  "Word": "applaudir"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a47"
+  },
+  "Word": "applaudis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a48"
+  },
+  "Word": "applaudit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a49"
+  },
+  "Word": "appliqua"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4a"
+  },
+  "Word": "appliquai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4b"
+  },
+  "Word": "applique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4c"
+  },
+  "Word": "applique"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4d"
+  },
+  "Word": "appliqué"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4e"
+  },
+  "Word": "appliqué"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a4f"
+  },
+  "Word": "appliquée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a50"
+  },
+  "Word": "appliquée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a51"
+  },
+  "Word": "appliquer"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a52"
+  },
+  "Word": "appliques"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a53"
+  },
+  "Word": "appliques"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a54"
+  },
+  "Word": "appliqués"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a55"
+  },
+  "Word": "appliqués"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a56"
+  },
+  "Word": "appliquez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a57"
+  },
+  "Word": "appoint"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a58"
+  },
+  "Word": "apport"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a59"
+  },
+  "Word": "apporta"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5a"
+  },
+  "Word": "apportai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5b"
+  },
+  "Word": "apportais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5c"
+  },
+  "Word": "apportait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5d"
+  },
+  "Word": "apportant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5e"
+  },
+  "Word": "apporte"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a5f"
+  },
+  "Word": "apporté"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a60"
+  },
+  "Word": "apportée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a61"
+  },
+  "Word": "apportées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a62"
+  },
+  "Word": "apportent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a63"
+  },
+  "Word": "apporter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a64"
+  },
+  "Word": "apportera"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a65"
+  },
+  "Word": "apportes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a66"
+  },
+  "Word": "apportés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a67"
+  },
+  "Word": "apportez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a68"
+  },
+  "Word": "apposez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a69"
+  },
+  "Word": "apprécia"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6a"
+  },
+  "Word": "apprécie"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6b"
+  },
+  "Word": "apprécié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6c"
+  },
+  "Word": "appréciée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6d"
+  },
+  "Word": "apprécier"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6e"
+  },
+  "Word": "apprécies"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a6f"
+  },
+  "Word": "appréciez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a70"
+  },
+  "Word": "apprenais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a71"
+  },
+  "Word": "apprenait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a72"
+  },
+  "Word": "apprenant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a73"
+  },
+  "Word": "apprenant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a74"
+  },
+  "Word": "apprend"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a75"
+  },
+  "Word": "apprendra"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a76"
+  },
+  "Word": "apprendre"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a77"
+  },
+  "Word": "apprends"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a78"
+  },
+  "Word": "apprenez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a79"
+  },
+  "Word": "appreniez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7a"
+  },
+  "Word": "apprenne"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7b"
+  },
+  "Word": "apprennes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7c"
+  },
+  "Word": "apprenons"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7d"
+  },
+  "Word": "apprenti"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7e"
+  },
+  "Word": "apprentis"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a7f"
+  },
+  "Word": "apprêtais"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a80"
+  },
+  "Word": "apprêtait"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a81"
+  },
+  "Word": "apprêtant"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a82"
+  },
+  "Word": "apprête"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a83"
+  },
+  "Word": "apprêtées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a84"
+  },
+  "Word": "apprêtées"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a85"
+  },
+  "Word": "apprêtent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a86"
+  },
+  "Word": "apprêter"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a87"
+  },
+  "Word": "apprîmes"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a88"
+  },
+  "Word": "apprirent"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a89"
+  },
+  "Word": "appris"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8a"
+  },
+  "Word": "appris"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8b"
+  },
+  "Word": "apprise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8c"
+  },
+  "Word": "apprise"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8d"
+  },
+  "Word": "apprises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8e"
+  },
+  "Word": "apprises"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a8f"
+  },
+  "Word": "apprit"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a90"
+  },
+  "Word": "approcha"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a91"
+  },
+  "Word": "approchai"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a92"
+  },
+  "Word": "approche"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a93"
+  },
+  "Word": "approche"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a94"
+  },
+  "Word": "approché"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a95"
+  },
+  "Word": "approché"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a96"
+  },
+  "Word": "approchée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a97"
+  },
+  "Word": "approchée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a98"
+  },
+  "Word": "approcher"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a99"
+  },
+  "Word": "approches"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9a"
+  },
+  "Word": "approches"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9b"
+  },
+  "Word": "approchés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9c"
+  },
+  "Word": "approchés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9d"
+  },
+  "Word": "approchez"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9e"
+  },
+  "Word": "approprié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449a9f"
+  },
+  "Word": "approprié"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa0"
+  },
+  "Word": "approuva"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa1"
+  },
+  "Word": "approuve"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa2"
+  },
+  "Word": "approuvé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa3"
+  },
+  "Word": "approuvé"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa4"
+  },
+  "Word": "approuvée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa5"
+  },
+  "Word": "approuvée"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa6"
+  },
+  "Word": "approuver"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa7"
+  },
+  "Word": "approuves"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa8"
+  },
+  "Word": "approuvés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aa9"
+  },
+  "Word": "approuvés"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aaa"
+  },
+  "Word": "appui"
+},{
+  "_id": {
+    "$oid": "60a3937f5cecdd0700449aab"
+
+])
