@@ -7,7 +7,7 @@ var db = null;
 let rooms = [];
 
 
-MongoClient.connect("mongodb://192.168.32.131:27017", {useUnifiedTopology: true}, function (err, client) {
+MongoClient.connect("mongodb://mongodb:27017", {useUnifiedTopology: true}, function (err, client) {
     console.log(err)
     db = client.db("dactilocontest");
 });
