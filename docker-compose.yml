@@ -1,7 +1,7 @@
 version: "3.8"
 services: 
  mongodb:
-  build: ./DactiloContest
+  image: mongo
   container_name: mongodb
   environment:
    - MONGO_INITDB_DATABASE:dactilocontest
@@ -11,7 +11,7 @@ services:
    - 27017:27017
   restart: unless-stopped
  app:
-  image : dactiloapp
+  build: ./DactiloConstest
   container_name: dactilo-container
   ports:
    - 3000:3000
